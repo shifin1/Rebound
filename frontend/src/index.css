@@ -1,0 +1,10 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  background-color: #adb5bd;
+  color: #1c2541;
+}
+
+main {
+  min-height: 75vh;
+}

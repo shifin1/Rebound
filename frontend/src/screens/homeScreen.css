@@ -1,0 +1,128 @@
+h1 {
+  text-align: left;
+  padding-top: 1rem;
+  font-size: 2rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.para {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.para p {
+  line-height: 2;
+}
+
+.para p a {
+  text-decoration: none;
+  padding-left: 0.4rem;
+}
+
+.news-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  border: 0.5px solid rgba(255, 255, 255, 0.377);
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  height: auto;
+  width: auto;
+  padding: 0.7rem;
+  background-color: rgba(255, 255, 255, 0.377);
+}
+
+.news-box a h6 {
+  width: 65vw;
+  color: rgb(2, 2, 243);
+}
+
+.news-box a {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 0.5rem;
+  align-items: center;
+  font-size: smaller;
+  text-decoration: none;
+}
+
+.news-box a p {
+  color: #1c254171;
+  position: relative;
+  left: 1.5rem;
+  top: 0.5rem;
+  text-transform: uppercase;
+}
+
+.news-section .news-box a p:hover {
+  color: #003ef7a8;
+  cursor: pointer;
+}
+
+.news-section .news-page-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: auto;
+  position: relative;
+  right: 0;
+  bottom: 0;
+  margin-top: 1rem;
+}
+
+.news-page-button button {
+  border: 0.2px solid rgba(238, 233, 233, 0.993);
+  height: 8vh;
+  color: #fff;
+  transition: all 0.5s;
+  position: relative;
+  background-color: #66a182;
+  padding: 0.5rem;
+}
+.news-page-button button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s;
+}
+.news-page-button button:hover::before {
+  opacity: 0;
+  transform: scale(0.5, 0.5);
+}
+.news-page-button button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transform: scale(1.2, 1.2);
+}
+.news-page-button button:hover::after {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+@media screen and (max-width: 1000px) {
+  .news-section {
+    width: 100%;
+  }
+
+  .news-box {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1rem;
+  }
+}

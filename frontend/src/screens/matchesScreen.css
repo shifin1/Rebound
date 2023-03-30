@@ -1,0 +1,133 @@
+.container__matches {
+  display: flex;
+}
+
+.title {
+  background-color: #c5c0c04b;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.matches__list__container {
+  width: 35vw;
+  margin-top: 15px;
+  border-right: 1px solid rgba(0, 0, 0, 0.749);
+}
+
+.border__none {
+  border: none;
+}
+
+.cards__container {
+  width: 30vw;
+}
+
+.active__match {
+  background-color: #66a182;
+}
+
+.matches__boxes {
+  display: flex;
+  align-items: center;
+}
+
+.error__message {
+  width: 50%;
+  margin: 20vh auto 0;
+}
+
+.match__details__container {
+  width: 50vw;
+  height: 90vh;
+  margin: 15px 19px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  text-align: center;
+  position: sticky;
+  top: 2%;
+  padding: 10px;
+  mix-blend-mode: multiply;
+  cursor: default;
+}
+
+.team__logo {
+  width: 80px;
+}
+
+.match__details__container table tr {
+  border-bottom: 0.2px solid rgba(114, 114, 114, 0.505);
+  height: 35px;
+  color: black;
+}
+
+.match__details__container table tr td p {
+  font-size: 3rem;
+  color: black;
+}
+
+.match__details__button {
+  border: 0.2px solid rgba(238, 233, 233, 0.993);
+  height: 8vh;
+  width: 20vw;
+  color: #fff;
+  transition: all 0.5s;
+  position: relative;
+  left: 30%;
+  background-color: #66a182;
+  padding: 0.5rem;
+  margin-bottom: 10px;
+}
+.match__details__button::before {
+  content: "";
+
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s;
+}
+.match__details__button:hover::before {
+  opacity: 0;
+  transform: scale(0.5, 0.5);
+}
+.match__details__button::after {
+  content: "";
+
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transform: scale(1.2, 1.2);
+}
+.match__details__button:hover::after {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+@media screen and (max-width: 1100px) {
+  .match__details__container {
+    display: none;
+  }
+
+  .cards__container {
+    width: auto;
+  }
+
+  .active__match {
+    background: rgba(133, 165, 187, 0.398);
+  }
+
+  .matches__list__container {
+    width: auto;
+    border: none;
+  }
+}

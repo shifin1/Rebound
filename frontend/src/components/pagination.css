@@ -1,0 +1,19 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination span {
+  padding: 10px 17px;
+  border: none;
+  cursor: pointer;
+  font-size: small;
+}
+
+.selected__page {
+  background: gray;
+}
+
+.disappear {
+  opacity: 0;
+}

@@ -1,0 +1,32 @@
+i.ico {
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+  font-style: normal;
+  font-weight: bold;
+  border: 1 px solid green;
+}
+
+.info {
+  height: 10vh;
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success {
+  margin: 10px;
+}
+
+.warn {
+  border: 1px solid orange;
+}
+
+.error {
+  height: 10vh;
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

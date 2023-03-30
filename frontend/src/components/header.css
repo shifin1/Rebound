@@ -1,0 +1,150 @@
+/* NAVBAR */
+
+.nav-container {
+  width: 100%;
+  font-family: "Montserrat";
+  font-size: medium;
+  background-color: transparent;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  margin-left: 1rem;
+  cursor: pointer;
+  color: #212529;
+  font-size: large;
+  font-weight: bold;
+}
+
+.nav-brand :hover {
+  color: #212529;
+}
+
+.toggleButton {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: transparent;
+  border: none;
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+}
+
+.toggleButton svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  color: #212529;
+  position: absolute;
+  top: 0.5em;
+  right: 0.75rem;
+}
+
+.nav-items ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  padding-right: 0.8rem;
+  padding-top: 1rem;
+}
+
+.nav-items ul li {
+  color: #1c2541;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-items ul li:hover {
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+}
+
+.logout-button:hover {
+  cursor: pointer;
+  color: rgba(87, 184, 70, 0.8);
+}
+
+/* .nav-searchbar {
+  height: auto;
+  position: relative;
+  bottom: 0.5rem;
+  left: 1.9 rem;
+  margin-left: auto;
+}
+
+.nav-searchbar input {
+  width: 80%;
+  height: 2.2rem;
+  background: #f5f5f5;
+  outline: none;
+  border: none;
+  border-radius: 1.625rem;
+  padding: 0 3.5rem 0 1.5rem;
+  font-size: 1rem;
+}
+
+.nav-searchbar button {
+  width: 3.5rem;
+  height: 2.8rem;
+  margin-left: -3.5rem;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.nav-searchbar button :hover {
+  cursor: pointer;
+  color: #242121;
+} */
+
+@media screen and (max-width: 1000px) {
+  .toggleButton {
+    display: block;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-items {
+    display: none;
+    width: 100%;
+  }
+
+  .nav-items-open {
+    width: 100%;
+  }
+
+  .nav-items-open ul {
+    width: 100%;
+    display: flex;
+
+    flex-direction: column;
+    padding: 1rem;
+    list-style: none;
+    background-color: transparent;
+    margin-left: 1rem;
+  }
+
+  .nav-items-open li {
+    cursor: pointer;
+    color: #1c2541;
+  }
+
+  .nav-items-open .nav-searchbar {
+    padding: 0.5rem 0;
+  }
+
+  .nav-items-open {
+    display: block;
+  }
+
+  .nav-searchbar {
+    margin-left: 0;
+  }
+}

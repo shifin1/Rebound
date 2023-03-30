@@ -1,0 +1,370 @@
+.team__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  border-radius: 5px;
+  margin-top: 15px;
+  background-image: linear-gradient(
+    rgb(133, 133, 133) 0%,
+    rgba(133, 133, 133, 0.3) 50%,
+    rgba(133, 133, 133, 0.15) 65%,
+    rgba(133, 133, 133, 0.075) 75.5%
+  );
+  cursor: pointer;
+}
+
+.team__header p {
+  font-size: 18px;
+  color: rgb(44, 44, 44);
+  text-transform: uppercase;
+  position: absolute;
+  left: 30px;
+  top: 15px;
+}
+
+.team__header img {
+  width: 100px;
+  mix-blend-mode: multiply;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.team__sections {
+  width: 70%;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.team__sections button {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.active_team_section {
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+.team__sections button:focus {
+  color: white;
+}
+
+/* MATCH */
+
+.detail__box {
+  width: 100%;
+  margin: auto;
+  border-radius: 5px;
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(
+    rgb(133, 133, 133) 0%,
+    rgba(133, 133, 133, 0.3) 50%,
+    rgba(133, 133, 133, 0.15) 65%,
+    rgba(133, 133, 133, 0.075) 75.5%
+  );
+}
+
+.detail__box h5 {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+.next_match_preview {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.time p {
+  text-align: center;
+  font-size: 15px;
+}
+
+.home_team,
+.away_team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+}
+
+.teams img {
+  mix-blend-mode: multiply;
+  width: 70px;
+  margin-bottom: 10px;
+}
+
+/* TRANSFERS */
+
+.transfers_table {
+  display: flex;
+  justify-content: space-between;
+  gap: 20vw;
+}
+
+.transfersIn,
+.transfersOut {
+  margin: 15px;
+  padding: 0 1rem;
+  font-size: 14px;
+}
+
+.transfersIn .transfer_type {
+  font-size: 15px;
+  color: green;
+  font-weight: 600;
+}
+
+.transfersOut .transfer_type {
+  font-size: 15px;
+  color: rgb(249, 31, 6);
+  font-weight: 600;
+}
+
+.transfer__player {
+  cursor: pointer;
+}
+
+/* INFO */
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  width: 45vw;
+  height: 20%;
+}
+
+.country img {
+  width: 1.75rem;
+  mix-blend-mode: multiply;
+}
+
+/* COMMENTS */
+
+.comments {
+  width: 100%;
+  margin: 15px 0;
+}
+
+.comments h5 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.comment {
+  border-bottom: 0.5px solid grey;
+  padding: 10px 0 0;
+  font-size: 14px;
+}
+
+.commented__user {
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.commented__user span {
+  font-size: 12px;
+}
+
+.comment__text {
+  font-size: 14px;
+}
+
+.comment__input {
+  width: 50%;
+  height: 30vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.input_title {
+  margin-top: 20px;
+  font-size: 16px;
+  color: black;
+}
+
+textarea {
+  width: 100%;
+  display: inline-block;
+  padding: 12px 20px;
+  border: 1px solid #979797;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+
+.submit__button {
+  position: absolute;
+  right: 0px;
+  bottom: 10%;
+}
+
+.submit__button button {
+  border: 0.2px solid rgba(238, 233, 233, 0.993);
+  height: 8vh;
+  width: 20vh;
+  color: #fff;
+  transition: all 0.5s;
+  background-color: #66a182;
+
+  padding: 0.5rem;
+}
+
+.submit__button button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s;
+}
+
+.submit__button button:hover::before {
+  opacity: 0;
+  transform: scale(0.5, 0.5);
+}
+.submit__button button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transform: scale(1.2, 1.2);
+}
+.submit__button button:hover::after {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+/* SQUAD SECTION */
+
+.players_list_container {
+  margin-top: 20px;
+}
+
+.squad {
+  display: flex;
+  flex-direction: column;
+  height: 10vh;
+  justify-content: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.496);
+  margin-bottom: 10px;
+}
+
+.coachName {
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.77);
+}
+
+.playerName {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.playerName:hover {
+  color: black;
+  font-size: 17px;
+}
+
+.playerInfo {
+  display: flex;
+  gap: 10px;
+  color: rgb(98, 98, 98);
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .team__header img {
+    width: 50px;
+  }
+
+  .detail__box {
+    width: 100%;
+    min-height: 10vh;
+  }
+
+  .next_match_preview {
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .next_match_preview p {
+    text-align: center;
+  }
+
+  .teams img {
+    width: 50px;
+    margin-bottom: 15px;
+  }
+
+  .transfersIn,
+  .transfersOut {
+    font-size: 12px;
+  }
+
+  .transfersIn .transfer_type {
+    font-size: 14px;
+    color: green;
+    font-weight: 500;
+  }
+
+  .transfersOut .transfer_type {
+    font-size: 14px;
+    color: rgb(249, 31, 6);
+    font-weight: 500;
+  }
+
+  .info {
+    font-size: 12px;
+    width: 79%;
+    height: 2rem;
+    border-bottom: 0.1px solid rgb(149, 148, 148);
+    padding-top: 15px;
+  }
+
+  .country img {
+    width: 1.75rem;
+    mix-blend-mode: multiply;
+  }
+
+  .comment__input {
+    width: 100%;
+  }
+
+  .submit__button {
+    position: absolute;
+    right: 0px;
+    bottom: 40%;
+  }
+
+  .squad {
+    height: 5vh;
+  }
+}
